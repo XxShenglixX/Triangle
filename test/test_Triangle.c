@@ -1,5 +1,7 @@
 #include "unity.h"
 #include "Triangle.h"
+#include "CException.h"
+
 
 char *getTriangleName(int side1, int side2, int side3);
 
@@ -140,3 +142,124 @@ void test_getTriangleName_given_5_1_1_should_return_invalid(void)
 	name = getTriangleName(5, 1 ,1);
 	TEST_ASSERT_EQUAL_STRING("invalid", name);
 }
+
+/* Exception Handling */
+void test_y_should_throw_an_exception()
+{
+	CEXCEPTION_T err;
+	Try
+	{
+		a();
+		TEST_FAIL_MESSAGE("Should generate an exception, but did not");
+	}
+	Catch(err)
+	{
+		TEST_ASSERT_EQUAL(ERR_NOT_TRIANGLE,err);
+		printf("Caught an exception\n");
+	}
+}
+
+
+void test_check_areLengthsAllStrictlyPostive_given_0_3_3_should_throw_an_exception()
+{
+	CEXCEPTION_T err;
+	Try
+	{
+		areLengthsAllStrictlyPostive(0,3,3);
+		TEST_FAIL_MESSAGE("Should generate an exception, but did not");
+	}
+	Catch(err)
+	{
+		TEST_ASSERT_EQUAL(ERR_LENGTH_IS_NOT_STRICTLY_POSITIVE,err);
+		printf("Error the length of the triangle must be strictly positive\n");
+	}
+}
+
+void test_check_areLengthsAllStrictlyPostive_given_3_minus_2_3_should_throw_an_exception()
+{
+	CEXCEPTION_T err;
+	Try
+	{
+		areLengthsAllStrictlyPostive(3,-2,3);
+		TEST_FAIL_MESSAGE("Should generate an exception, but did not");
+	}
+	Catch(err)
+	{
+		TEST_ASSERT_EQUAL(ERR_LENGTH_IS_NOT_STRICTLY_POSITIVE,err);
+		printf("Error the length of the triangle must be strictly positive\n");
+	}
+}
+
+void test_check_areLengthsAllStrictlyPostive_given_3_3_3_should_NOT_throw_an_exception()
+{
+	CEXCEPTION_T err;
+	Try
+	{
+		areLengthsAllStrictlyPostive(3,3,3);
+		
+	}
+	Catch(err)
+	{
+		TEST_FAIL_MESSAGE("Error should NOT generate an exception.");
+	}
+}
+
+void test_is_Triangle_given_1_2_10_should_throw_an_exception()
+{
+	CEXCEPTION_T err;
+	Try
+	{
+		isTriangle(1,2,10);
+		TEST_FAIL_MESSAGE("Should generate an exception, but did not");
+	}
+	Catch(err)
+	{
+		TEST_ASSERT_EQUAL(ERR_NOT_TRIANGLE,err);
+		printf("Error NOT a triangle !\n");
+	}
+}
+
+void test_is_Triangle_given_1_10_2_should_throw_an_exception()
+{
+	CEXCEPTION_T err;
+	Try
+	{
+		isTriangle(1,10,2);
+		TEST_FAIL_MESSAGE("Should generate an exception, but did not");
+	}
+	Catch(err)
+	{
+		TEST_ASSERT_EQUAL(ERR_NOT_TRIANGLE,err);
+		printf("Error NOT a triangle !\n");
+	}
+}
+
+void test_is_Triangle_given_10_1_2_should_throw_an_exception()
+{
+	CEXCEPTION_T err;
+	Try
+	{
+		isTriangle(10,1,2);
+		TEST_FAIL_MESSAGE("Should generate an exception, but did not");
+	}
+	Catch(err)
+	{
+		TEST_ASSERT_EQUAL(ERR_NOT_TRIANGLE,err);
+		printf("Error NOT a triangle !\n");
+	}
+}
+
+void test_is_Triangle_given_10_10_10_should_not_throw_an_exception()
+{
+	CEXCEPTION_T err;
+	Try
+	{
+		isTriangle(10,10,10);
+	}
+	Catch(err)
+	{
+		TEST_ASSERT_EQUAL(ERR_NOT_TRIANGLE,err);
+		printf("Error should NOT generate any exception !\n");
+	}
+}
+

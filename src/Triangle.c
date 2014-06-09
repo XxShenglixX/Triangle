@@ -1,4 +1,6 @@
 #include "Triangle.h"
+#include "CException.h"
+#include <stdio.h>
 
 char *getTriangleName(int side1, int side2, int side3) 
 {
@@ -23,4 +25,27 @@ char *getTriangleName(int side1, int side2, int side3)
 		if((side1 != side2) && (side2 != side3) && (side1 != side3))
 			return "scalene";
 	
+}
+
+int a()
+{
+	printf("Entering a().\n");
+	Throw(ERR_NOT_TRIANGLE);
+	printf("Exiting a().\n");
+}
+
+int areLengthsAllStrictlyPostive(int length1,int length2,int length3)
+{
+	if (length1 <= 0 || length2 <= 0 || length3 <= 0 )
+		Throw(ERR_LENGTH_IS_NOT_STRICTLY_POSITIVE);
+}
+
+int isTriangle(int length1,int length2,int length3)
+{
+	if ( (length1+length2 < length3) || 
+		 (length1+length3 < length2) ||
+		 (length2+length3 < length1) 
+	   )
+	   Throw(ERR_NOT_TRIANGLE);
+	   
 }
