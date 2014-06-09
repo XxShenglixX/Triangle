@@ -36,7 +36,7 @@ int areLengthsAllStrictlyPostive(int length1,int length2,int length3)
 int isTriangle(int length1,int length2,int length3)
 {
 	if ( (length1+length2 < length3) || 
-		 (length1+length3 < length2) 
+		 (length1+length3 < length2) ||
 		 (length2+length3 < length1) 
 	   )
 	   Throw(ERR_NOT_TRIANGLE);

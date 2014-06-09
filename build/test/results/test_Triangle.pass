@@ -45,40 +45,35 @@
 - :test: test_getTriangleName_given_5_1_1_should_return_invalid
   :line: 138
   :message: ''
-- :test: test_y_should_throw_an_exception
+- :test: test_check_areLengthsAllStrictlyPostive_given_0_3_3_should_throw_an_exception
   :line: 147
   :message: ''
-- :test: test_check_areLengthsAllStrictlyPostive_given_0_3_3_should_throw_an_exception
-  :line: 163
-  :message: ''
 - :test: test_check_areLengthsAllStrictlyPostive_given_3_minus_2_3_should_throw_an_exception
-  :line: 178
+  :line: 162
   :message: ''
 - :test: test_check_areLengthsAllStrictlyPostive_given_3_3_3_should_NOT_throw_an_exception
-  :line: 193
+  :line: 177
   :message: ''
 - :test: test_is_Triangle_given_1_2_10_should_throw_an_exception
-  :line: 207
+  :line: 191
   :message: ''
 - :test: test_is_Triangle_given_1_10_2_should_throw_an_exception
-  :line: 222
+  :line: 206
   :message: ''
 - :test: test_is_Triangle_given_10_1_2_should_throw_an_exception
-  :line: 237
+  :line: 221
   :message: ''
 - :test: test_is_Triangle_given_10_10_10_should_not_throw_an_exception
-  :line: 252
+  :line: 236
   :message: ''
 :failures: []
 :ignores: []
 :counts:
-  :total: 22
-  :passed: 22
+  :total: 21
+  :passed: 21
   :failed: 0
   :ignored: 0
 :stdout:
-- Entering a().
-- Caught an exception
 - Error the length of the triangle must be strictly positive
 - Error the length of the triangle must be strictly positive
 - Error NOT a triangle !

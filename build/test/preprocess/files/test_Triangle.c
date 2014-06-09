@@ -287,38 +287,6 @@ void test_getTriangleName_given_5_1_1_should_return_invalid(void)
 
 
 
-void test_y_should_throw_an_exception()
-
-{
-
- unsigned int err;
-
- { jmp_buf *PrevFrame, NewFrame; unsigned int MY_ID = (0); PrevFrame = CExceptionFrames[(0)].pFrame; CExceptionFrames[MY_ID].pFrame = (jmp_buf*)(&NewFrame); CExceptionFrames[MY_ID].Exception = (0x5A5A5A5A); if (_setjmp(NewFrame) == 0) { if (&PrevFrame)
-
- {
-
-  a();
-
-  UnityFail( ("Should generate an exception, but did not"), (_U_UINT)153);;
-
- }
-
- else { } CExceptionFrames[MY_ID].Exception = (0x5A5A5A5A); } else { err = CExceptionFrames[MY_ID].Exception; err=err; } CExceptionFrames[MY_ID].pFrame = PrevFrame; } if (CExceptionFrames[(0)].Exception != (0x5A5A5A5A))
-
- {
-
-  UnityAssertEqualNumber((_U_SINT)((ERR_NOT_TRIANGLE)), (_U_SINT)((err)), (((void *)0)), (_U_UINT)157, UNITY_DISPLAY_STYLE_INT);
-
-  printf("Caught an exception\n");
-
- }
-
-}
-
-
-
-
-
 void test_check_areLengthsAllStrictlyPostive_given_0_3_3_should_throw_an_exception()
 
 {
@@ -331,7 +299,7 @@ void test_check_areLengthsAllStrictlyPostive_given_0_3_3_should_throw_an_excepti
 
   areLengthsAllStrictlyPostive(0,3,3);
 
-  UnityFail( ("Should generate an exception, but did not"), (_U_UINT)169);;
+  UnityFail( ("Should generate an exception, but did not"), (_U_UINT)153);;
 
  }
 
@@ -339,7 +307,7 @@ void test_check_areLengthsAllStrictlyPostive_given_0_3_3_should_throw_an_excepti
 
  {
 
-  UnityAssertEqualNumber((_U_SINT)((ERR_LENGTH_IS_NOT_STRICTLY_POSITIVE)), (_U_SINT)((err)), (((void *)0)), (_U_UINT)173, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)((ERR_LENGTH_IS_NOT_STRICTLY_POSITIVE)), (_U_SINT)((err)), (((void *)0)), (_U_UINT)157, UNITY_DISPLAY_STYLE_INT);
 
   printf("Error the length of the triangle must be strictly positive\n");
 
@@ -361,7 +329,7 @@ void test_check_areLengthsAllStrictlyPostive_given_3_minus_2_3_should_throw_an_e
 
   areLengthsAllStrictlyPostive(3,-2,3);
 
-  UnityFail( ("Should generate an exception, but did not"), (_U_UINT)184);;
+  UnityFail( ("Should generate an exception, but did not"), (_U_UINT)168);;
 
  }
 
@@ -369,7 +337,7 @@ void test_check_areLengthsAllStrictlyPostive_given_3_minus_2_3_should_throw_an_e
 
  {
 
-  UnityAssertEqualNumber((_U_SINT)((ERR_LENGTH_IS_NOT_STRICTLY_POSITIVE)), (_U_SINT)((err)), (((void *)0)), (_U_UINT)188, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)((ERR_LENGTH_IS_NOT_STRICTLY_POSITIVE)), (_U_SINT)((err)), (((void *)0)), (_U_UINT)172, UNITY_DISPLAY_STYLE_INT);
 
   printf("Error the length of the triangle must be strictly positive\n");
 
@@ -399,7 +367,7 @@ void test_check_areLengthsAllStrictlyPostive_given_3_3_3_should_NOT_throw_an_exc
 
  {
 
-  UnityFail( ("Error should NOT generate an exception."), (_U_UINT)203);;
+  UnityFail( ("Error should NOT generate an exception."), (_U_UINT)187);;
 
  }
 
@@ -419,7 +387,7 @@ void test_is_Triangle_given_1_2_10_should_throw_an_exception()
 
   isTriangle(1,2,10);
 
-  UnityFail( ("Should generate an exception, but did not"), (_U_UINT)213);;
+  UnityFail( ("Should generate an exception, but did not"), (_U_UINT)197);;
 
  }
 
@@ -427,7 +395,7 @@ void test_is_Triangle_given_1_2_10_should_throw_an_exception()
 
  {
 
-  UnityAssertEqualNumber((_U_SINT)((ERR_NOT_TRIANGLE)), (_U_SINT)((err)), (((void *)0)), (_U_UINT)217, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)((ERR_NOT_TRIANGLE)), (_U_SINT)((err)), (((void *)0)), (_U_UINT)201, UNITY_DISPLAY_STYLE_INT);
 
   printf("Error NOT a triangle !\n");
 
@@ -449,7 +417,7 @@ void test_is_Triangle_given_1_10_2_should_throw_an_exception()
 
   isTriangle(1,10,2);
 
-  UnityFail( ("Should generate an exception, but did not"), (_U_UINT)228);;
+  UnityFail( ("Should generate an exception, but did not"), (_U_UINT)212);;
 
  }
 
@@ -457,7 +425,7 @@ void test_is_Triangle_given_1_10_2_should_throw_an_exception()
 
  {
 
-  UnityAssertEqualNumber((_U_SINT)((ERR_NOT_TRIANGLE)), (_U_SINT)((err)), (((void *)0)), (_U_UINT)232, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)((ERR_NOT_TRIANGLE)), (_U_SINT)((err)), (((void *)0)), (_U_UINT)216, UNITY_DISPLAY_STYLE_INT);
 
   printf("Error NOT a triangle !\n");
 
@@ -479,7 +447,7 @@ void test_is_Triangle_given_10_1_2_should_throw_an_exception()
 
   isTriangle(10,1,2);
 
-  UnityFail( ("Should generate an exception, but did not"), (_U_UINT)243);;
+  UnityFail( ("Should generate an exception, but did not"), (_U_UINT)227);;
 
  }
 
@@ -487,7 +455,7 @@ void test_is_Triangle_given_10_1_2_should_throw_an_exception()
 
  {
 
-  UnityAssertEqualNumber((_U_SINT)((ERR_NOT_TRIANGLE)), (_U_SINT)((err)), (((void *)0)), (_U_UINT)247, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)((ERR_NOT_TRIANGLE)), (_U_SINT)((err)), (((void *)0)), (_U_UINT)231, UNITY_DISPLAY_STYLE_INT);
 
   printf("Error NOT a triangle !\n");
 
@@ -515,7 +483,7 @@ void test_is_Triangle_given_10_10_10_should_not_throw_an_exception()
 
  {
 
-  UnityAssertEqualNumber((_U_SINT)((ERR_NOT_TRIANGLE)), (_U_SINT)((err)), (((void *)0)), (_U_UINT)261, UNITY_DISPLAY_STYLE_INT);
+  UnityAssertEqualNumber((_U_SINT)((ERR_NOT_TRIANGLE)), (_U_SINT)((err)), (((void *)0)), (_U_UINT)245, UNITY_DISPLAY_STYLE_INT);
 
   printf("Error should NOT generate any exception !\n");
 

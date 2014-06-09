@@ -48,7 +48,6 @@ extern void test_getTriangleName_given_2_6_negative3_should_return_invalid(void)
 extern void test_getTriangleName_given_1_1_3_should_return_invalid(void);
 extern void test_getTriangleName_given_1_4_1_should_return_invalid(void);
 extern void test_getTriangleName_given_5_1_1_should_return_invalid(void);
-extern void test_y_should_throw_an_exception(void);
 extern void test_check_areLengthsAllStrictlyPostive_given_0_3_3_should_throw_an_exception(void);
 extern void test_check_areLengthsAllStrictlyPostive_given_3_minus_2_3_should_throw_an_exception(void);
 extern void test_check_areLengthsAllStrictlyPostive_given_3_3_3_should_NOT_throw_an_exception(void);
@@ -85,14 +84,13 @@ int main(void)
   RUN_TEST(test_getTriangleName_given_1_1_3_should_return_invalid, 121);
   RUN_TEST(test_getTriangleName_given_1_4_1_should_return_invalid, 129);
   RUN_TEST(test_getTriangleName_given_5_1_1_should_return_invalid, 138);
-  RUN_TEST(test_y_should_throw_an_exception, 147);
-  RUN_TEST(test_check_areLengthsAllStrictlyPostive_given_0_3_3_should_throw_an_exception, 163);
-  RUN_TEST(test_check_areLengthsAllStrictlyPostive_given_3_minus_2_3_should_throw_an_exception, 178);
-  RUN_TEST(test_check_areLengthsAllStrictlyPostive_given_3_3_3_should_NOT_throw_an_exception, 193);
-  RUN_TEST(test_is_Triangle_given_1_2_10_should_throw_an_exception, 207);
-  RUN_TEST(test_is_Triangle_given_1_10_2_should_throw_an_exception, 222);
-  RUN_TEST(test_is_Triangle_given_10_1_2_should_throw_an_exception, 237);
-  RUN_TEST(test_is_Triangle_given_10_10_10_should_not_throw_an_exception, 252);
+  RUN_TEST(test_check_areLengthsAllStrictlyPostive_given_0_3_3_should_throw_an_exception, 147);
+  RUN_TEST(test_check_areLengthsAllStrictlyPostive_given_3_minus_2_3_should_throw_an_exception, 162);
+  RUN_TEST(test_check_areLengthsAllStrictlyPostive_given_3_3_3_should_NOT_throw_an_exception, 177);
+  RUN_TEST(test_is_Triangle_given_1_2_10_should_throw_an_exception, 191);
+  RUN_TEST(test_is_Triangle_given_1_10_2_should_throw_an_exception, 206);
+  RUN_TEST(test_is_Triangle_given_10_1_2_should_throw_an_exception, 221);
+  RUN_TEST(test_is_Triangle_given_10_10_10_should_not_throw_an_exception, 236);
 
   return (UnityEnd());
 }

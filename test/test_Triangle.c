@@ -144,22 +144,6 @@ void test_getTriangleName_given_5_1_1_should_return_invalid(void)
 }
 
 /* Exception Handling */
-void test_y_should_throw_an_exception()
-{
-	CEXCEPTION_T err;
-	Try
-	{
-		a();
-		TEST_FAIL_MESSAGE("Should generate an exception, but did not");
-	}
-	Catch(err)
-	{
-		TEST_ASSERT_EQUAL(ERR_NOT_TRIANGLE,err);
-		printf("Caught an exception\n");
-	}
-}
-
-
 void test_check_areLengthsAllStrictlyPostive_given_0_3_3_should_throw_an_exception()
 {
 	CEXCEPTION_T err;
