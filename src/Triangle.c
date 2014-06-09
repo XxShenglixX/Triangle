@@ -27,13 +27,6 @@ char *getTriangleName(int side1, int side2, int side3)
 	
 }
 
-int a()
-{
-	printf("Entering a().\n");
-	Throw(ERR_NOT_TRIANGLE);
-	printf("Exiting a().\n");
-}
-
 int areLengthsAllStrictlyPostive(int length1,int length2,int length3)
 {
 	if (length1 <= 0 || length2 <= 0 || length3 <= 0 )
@@ -43,7 +36,7 @@ int areLengthsAllStrictlyPostive(int length1,int length2,int length3)
 int isTriangle(int length1,int length2,int length3)
 {
 	if ( (length1+length2 < length3) || 
-		 (length1+length3 < length2) ||
+		 (length1+length3 < length2) 
 		 (length2+length3 < length1) 
 	   )
 	   Throw(ERR_NOT_TRIANGLE);
